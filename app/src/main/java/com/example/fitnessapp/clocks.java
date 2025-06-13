@@ -56,7 +56,7 @@ public class clocks extends AppCompatActivity implements View.OnClickListener {
         }else if(view.getId() == R.id.Reset_button) {
 
         }else if(view.getId() == R.id.Back) {
-            switchActivity();
+            finish();
 
 
 
@@ -82,16 +82,15 @@ public class clocks extends AppCompatActivity implements View.OnClickListener {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        if (!Pause)
+                        if (!Pause) {
                             count_in_seconds = count_in_seconds + 1;
                         timer_text.setText(Integer.toString(count_in_seconds));
-                    }
+                    }}
 
                 });
              }
 
-             private void runOnUiThread(Runnable runnable) {
-             }
+
          }, 0,1000);
 
 

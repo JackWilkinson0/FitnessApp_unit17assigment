@@ -44,14 +44,17 @@ public class Exercise extends AppCompatActivity implements View.OnClickListener 
         int new_val = current_val;
 
 
-        if (view.getId() == R.id.ADD_BUTTON){
-            new_val = current_val +1;
+        if (view.getId() == R.id.ADD_BUTTON) {
+            new_val = current_val + 1;
 
 
         } else if (view.getId() == R.id.MINUS_BUTTON) {
-            new_val = current_val -1;
-        }
+            new_val = current_val - 1;
 
+
+        } else if (view.getId() == R.id.BButton) {
+            finish();
+        }
         COUNT_VAL.setText(String.valueOf(new_val));
 
 

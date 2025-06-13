@@ -49,6 +49,9 @@ public class Water_tracker extends AppCompatActivity implements View.OnClickList
 
         } else if (view.getId() == R.id.minus_button) {
             new_val = current_val -1;
+
+        } else if (view.getId()  == R.id.Back_1) {
+            finish();
         }
         count_val.setText(String.valueOf(new_val));
 
